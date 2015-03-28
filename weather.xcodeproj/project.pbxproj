@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0808BC1AC65B44006D7E04 /* torontoTest1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC0808BB1AC65B44006D7E04 /* torontoTest1.png */; };
 		CC763E411AA175DC0075858A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E401AA175DC0075858A /* AppDelegate.swift */; };
-		CC763E431AA175DC0075858A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E421AA175DC0075858A /* ViewController.swift */; };
-		CC763E461AA175DC0075858A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC763E441AA175DC0075858A /* Main.storyboard */; };
+		CC763E431AA175DC0075858A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E421AA175DC0075858A /* MainViewController.swift */; };
 		CC763E481AA175DC0075858A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC763E471AA175DC0075858A /* Images.xcassets */; };
 		CC763E4B1AA175DC0075858A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC763E491AA175DC0075858A /* LaunchScreen.xib */; };
 		CC763E571AA175DD0075858A /* weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E561AA175DD0075858A /* weatherTests.swift */; };
+		CCEF60011AA5362D00C26841 /* RCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60001AA5362D00C26841 /* RCCell.swift */; };
+		CCEF60031AA5366E00C26841 /* RCFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */; };
+		CCEF60051AA541A700C26841 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60041AA541A700C26841 /* Summary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC0808BB1AC65B44006D7E04 /* torontoTest1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = torontoTest1.png; path = images/torontoTest1.png; sourceTree = "<group>"; };
 		CC763E3B1AA175DC0075858A /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC763E3F1AA175DC0075858A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC763E401AA175DC0075858A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC763E421AA175DC0075858A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC763E451AA175DC0075858A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC763E421AA175DC0075858A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CC763E471AA175DC0075858A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CC763E4A1AA175DC0075858A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CC763E501AA175DD0075858A /* weatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC763E551AA175DD0075858A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC763E561AA175DD0075858A /* weatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherTests.swift; sourceTree = "<group>"; };
+		CCEF60001AA5362D00C26841 /* RCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCCell.swift; sourceTree = "<group>"; };
+		CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCFlowLayout.swift; sourceTree = "<group>"; };
+		CCEF60041AA541A700C26841 /* Summary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0808BD1AC65D5F006D7E04 /* backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				CC0808BB1AC65B44006D7E04 /* torontoTest1.png */,
+			);
+			name = backgrounds;
+			sourceTree = "<group>";
+		};
 		CC763E321AA175DC0075858A = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +92,12 @@
 			isa = PBXGroup;
 			children = (
 				CC763E401AA175DC0075858A /* AppDelegate.swift */,
-				CC763E421AA175DC0075858A /* ViewController.swift */,
-				CC763E441AA175DC0075858A /* Main.storyboard */,
+				CC763E421AA175DC0075858A /* MainViewController.swift */,
+				CCEF60001AA5362D00C26841 /* RCCell.swift */,
+				CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */,
+				CCEF60041AA541A700C26841 /* Summary.swift */,
 				CC763E471AA175DC0075858A /* Images.xcassets */,
+				CC0808BD1AC65D5F006D7E04 /* backgrounds */,
 				CC763E491AA175DC0075858A /* LaunchScreen.xib */,
 				CC763E3E1AA175DC0075858A /* Supporting Files */,
 			);
@@ -161,6 +178,7 @@
 				TargetAttributes = {
 					CC763E3A1AA175DC0075858A = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = P4Z5764KGJ;
 					};
 					CC763E4F1AA175DD0075858A = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -192,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC763E461AA175DC0075858A /* Main.storyboard in Resources */,
+				CC0808BC1AC65B44006D7E04 /* torontoTest1.png in Resources */,
 				CC763E4B1AA175DC0075858A /* LaunchScreen.xib in Resources */,
 				CC763E481AA175DC0075858A /* Images.xcassets in Resources */,
 			);
@@ -212,7 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC763E431AA175DC0075858A /* ViewController.swift in Sources */,
+				CCEF60031AA5366E00C26841 /* RCFlowLayout.swift in Sources */,
+				CCEF60051AA541A700C26841 /* Summary.swift in Sources */,
+				CCEF60011AA5362D00C26841 /* RCCell.swift in Sources */,
+				CC763E431AA175DC0075858A /* MainViewController.swift in Sources */,
 				CC763E411AA175DC0075858A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,14 +257,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CC763E441AA175DC0075858A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC763E451AA175DC0075858A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC763E491AA175DC0075858A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +420,7 @@
 				CC763E5C1AA175DD0075858A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC763E5D1AA175DD0075858A /* Build configuration list for PBXNativeTarget "weatherTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +429,7 @@
 				CC763E5F1AA175DD0075858A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
