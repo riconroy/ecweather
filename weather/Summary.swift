@@ -25,7 +25,7 @@ class Summary: UICollectionViewCell {
 		
 		let tempRect = CGRectMake(50, 50, 250, 90)
 		temperature = UILabel(frame: tempRect)
-		temperature?.font = UIFont (name: "HelveticaNeue-UltraLight", size: 96)
+		temperature?.font = UIFont (name: "HelveticaNeue-UltraLight", size: 124)
 		temperature?.text = "-17"
 		temperature?.textColor = UIColor.whiteColor()
 		

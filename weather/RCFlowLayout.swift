@@ -11,7 +11,7 @@ import UIKit
 class RCFlowLayout : UICollectionViewFlowLayout {
 	
 	override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
-		let attributesArray = super.layoutAttributesForElementsInRect(rect) as [UICollectionViewLayoutAttributes]
+		let attributesArray = super.layoutAttributesForElementsInRect(rect) as! [UICollectionViewLayoutAttributes]
 		return attributesArray.map {
 			theLayoutAttributes in
 			if theLayoutAttributes.representedElementKind == nil {
@@ -27,7 +27,7 @@ class RCFlowLayout : UICollectionViewFlowLayout {
 		let marginSize = 10
 		let cellSize = screenWidth - marginSize * 2
 		
-		self.itemSize = CGSize(width: cellSize, height: cellSize)
+		self.itemSize = CGSize(width: cellSize, height: 2 * cellSize)
 		self.minimumLineSpacing = CGFloat (marginSize)
 		self.sectionInset = UIEdgeInsets(top: CGFloat (marginSize * 2),
 			left: CGFloat (marginSize), bottom: CGFloat (marginSize * 2), right: CGFloat (marginSize))

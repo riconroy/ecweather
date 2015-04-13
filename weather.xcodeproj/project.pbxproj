@@ -13,7 +13,7 @@
 		CC763E481AA175DC0075858A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC763E471AA175DC0075858A /* Images.xcassets */; };
 		CC763E4B1AA175DC0075858A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC763E491AA175DC0075858A /* LaunchScreen.xib */; };
 		CC763E571AA175DD0075858A /* weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E561AA175DD0075858A /* weatherTests.swift */; };
-		CCEF60011AA5362D00C26841 /* RCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60001AA5362D00C26841 /* RCCell.swift */; };
+		CC998CBE1ADB575500DCFF37 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CC998CBD1ADB575500DCFF37 /* UIImage+ImageEffects.m */; };
 		CCEF60031AA5366E00C26841 /* RCFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */; };
 		CCEF60051AA541A700C26841 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60041AA541A700C26841 /* Summary.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +39,9 @@
 		CC763E501AA175DD0075858A /* weatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC763E551AA175DD0075858A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC763E561AA175DD0075858A /* weatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherTests.swift; sourceTree = "<group>"; };
-		CCEF60001AA5362D00C26841 /* RCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCCell.swift; sourceTree = "<group>"; };
+		CC998CBC1ADB575500DCFF37 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		CC998CBD1ADB575500DCFF37 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		CC998CC01ADB596C00DCFF37 /* weather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "weather-Bridging-Header.h"; path = "../weather-Bridging-Header.h"; sourceTree = "<group>"; };
 		CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCFlowLayout.swift; sourceTree = "<group>"; };
 		CCEF60041AA541A700C26841 /* Summary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +95,7 @@
 			children = (
 				CC763E401AA175DC0075858A /* AppDelegate.swift */,
 				CC763E421AA175DC0075858A /* MainViewController.swift */,
-				CCEF60001AA5362D00C26841 /* RCCell.swift */,
+				CC998CBF1ADB576000DCFF37 /* ImageEffects */,
 				CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */,
 				CCEF60041AA541A700C26841 /* Summary.swift */,
 				CC763E471AA175DC0075858A /* Images.xcassets */,
@@ -127,6 +129,16 @@
 				CC763E551AA175DD0075858A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC998CBF1ADB576000DCFF37 /* ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				CC998CBC1ADB575500DCFF37 /* UIImage+ImageEffects.h */,
+				CC998CBD1ADB575500DCFF37 /* UIImage+ImageEffects.m */,
+				CC998CC01ADB596C00DCFF37 /* weather-Bridging-Header.h */,
+			);
+			name = ImageEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCEF60031AA5366E00C26841 /* RCFlowLayout.swift in Sources */,
+				CC998CBE1ADB575500DCFF37 /* UIImage+ImageEffects.m in Sources */,
 				CCEF60051AA541A700C26841 /* Summary.swift in Sources */,
-				CCEF60011AA5362D00C26841 /* RCCell.swift in Sources */,
 				CC763E431AA175DC0075858A /* MainViewController.swift in Sources */,
 				CC763E411AA175DC0075858A /* AppDelegate.swift in Sources */,
 			);
@@ -353,6 +365,7 @@
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "weather-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -364,6 +377,7 @@
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "weather-Bridging-Header.h";
 			};
 			name = Release;
 		};
