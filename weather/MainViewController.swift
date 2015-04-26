@@ -14,6 +14,10 @@ class MainViewController: UIViewController {
 	var bgBlurImageView: UIImageView?
 	var bgImageView: UIImageView?
 	
+	// constants
+	let maxRise: CGFloat = 30.0
+	let riseRatio: CGFloat = 15.0
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -21,22 +25,15 @@ class MainViewController: UIViewController {
 		let bgImage = UIImage(named: "imageTest1")
 		bgImageView = UIImageView(image: bgImage!)
 		bgImageView?.contentMode = .Top
-		// bgImageView!.frame = view.frame
 		view.addSubview(bgImageView!)
 		
 		
 		// create the same image on top, but blurred
-		// let blurredImage = bgImage!.applyBlurWithRadius(30.0, tintColor: UIColor(white: 0.8, alpha: 0.73), saturationDeltaFactor: 1.8, maskImage: bgImage)
-		// let blurredImage = bgImage!.applyLightEffect()
 		let reducedImage = resizeImageToNonRetina(bgImage!)
 		let blurredImage = applyBlurEffectToImage(reducedImage)
-		println("\(bgImage)")
-		println("\(reducedImage)")
-		println("\(blurredImage)")
 		
 		bgBlurImageView = UIImageView(image: blurredImage)
 		bgBlurImageView?.contentMode = .Top
-		// bgBlurImageView!.frame = view.frame
 		view.addSubview(bgBlurImageView!)
 		
 		// hide it
@@ -73,11 +70,7 @@ class MainViewController: UIViewController {
 		let thePercent = scrollBlur / maxOffset
 		bgBlurImageView!.alpha = thePercent
 		
-		// how far up do we want the background image to rise?
-		let maxRise:CGFloat = 30.0
-		let riseRatio: CGFloat = 15.0
-		
-		// make that into an amount to rise the background image
+		// calculate how far the images should be rising
 		let scrollBgMove = min((maxRise * riseRatio), max(0.0, offsetY))
 		let newFrame = CGRectOffset(view.frame, 0, -(scrollBgMove / riseRatio))
 		bgBlurImageView?.frame = newFrame
@@ -87,9 +80,9 @@ class MainViewController: UIViewController {
 	/* image manipulation routines */
 	
 	func resizeImageToNonRetina (original:UIImage) -> UIImage {
-		let newSize = CGSizeMake(view.frame.size.width, view.frame.size.height + 30.0)
-		UIGraphicsBeginImageContextWithOptions(newSize, true, 1.0)
-		original.drawInRect(CGRectMake(0, 0, view.frame.size.width, view.frame.size.height + 30.0))
+		let fullRect = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height + maxRise)
+		UIGraphicsBeginImageContextWithOptions(fullRect.size, true, 1.0)
+		original.drawInRect(fullRect)
 		let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
 		return resizedImage
@@ -104,10 +97,10 @@ class MainViewController: UIViewController {
 		blurfilter.setValue(5.0, forKey: kCIInputRadiusKey)
 		
 		// get a full rect, including the hidden bits
-		let fullRect = CGRectMake(0, 0, imageToBlur.extent().width, imageToBlur.extent().height) //  + 30.0)
+		let fullRect = CGRectMake(0, 0, imageToBlur.extent().width, imageToBlur.extent().height)
 		
 		let context = CIContext(options:[kCIContextUseSoftwareRenderer : true])
-		let cgimg = context.createCGImage(blurfilter.outputImage, fromRect: fullRect) // imageToBlur.extent())
+		let cgimg = context.createCGImage(blurfilter.outputImage, fromRect: fullRect)
 		let blurredImage = UIImage(CGImage: cgimg)
 		
 		// if we wanted to daisy chain filters:
@@ -115,23 +108,6 @@ class MainViewController: UIViewController {
 		
 		return blurredImage!
 	}
-	
-	/* this is the old version
-	func applyBlurEffectToImage (original: UIImage) -> UIImage {
-		UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
-		var imgaa :UIImage = UIGraphicsGetImageFromCurrentImageContext();
-		var ciimage :CIImage = CIImage(image: imgaa)
-		
-		var filter : CIFilter = CIFilter(name:"CIGaussianBlur")
-		filter.setDefaults()
-		filter.setValue(ciimage, forKey: kCIInputImageKey)
-		filter.setValue(30, forKey: kCIInputRadiusKey)
-		var outputImage : CIImage = filter.outputImage;
-		var finalImage :UIImage = UIImage(CIImage: outputImage)!
-		UIGraphicsEndImageContext()
-		
-		return finalImage
-	} */
 }
 
 // MARK: - Data Source
