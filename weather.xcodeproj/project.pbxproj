@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC0808BC1AC65B44006D7E04 /* torontoTest1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC0808BB1AC65B44006D7E04 /* torontoTest1.png */; };
+		CC1D6CB61AEC966800B0E141 /* imageTest1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1D6CB41AEC966800B0E141 /* imageTest1@2x.png */; };
+		CC1D6CB71AEC966800B0E141 /* imageTest1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1D6CB51AEC966800B0E141 /* imageTest1@3x.png */; };
 		CC763E411AA175DC0075858A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E401AA175DC0075858A /* AppDelegate.swift */; };
 		CC763E431AA175DC0075858A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E421AA175DC0075858A /* MainViewController.swift */; };
 		CC763E481AA175DC0075858A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC763E471AA175DC0075858A /* Images.xcassets */; };
@@ -29,7 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC0808BB1AC65B44006D7E04 /* torontoTest1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = torontoTest1.png; path = images/torontoTest1.png; sourceTree = "<group>"; };
+		CC1D6CB41AEC966800B0E141 /* imageTest1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "imageTest1@2x.png"; path = "images/imageTest1@2x.png"; sourceTree = "<group>"; };
+		CC1D6CB51AEC966800B0E141 /* imageTest1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "imageTest1@3x.png"; path = "images/imageTest1@3x.png"; sourceTree = "<group>"; };
 		CC763E3B1AA175DC0075858A /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC763E3F1AA175DC0075858A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC763E401AA175DC0075858A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +69,8 @@
 		CC0808BD1AC65D5F006D7E04 /* backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				CC0808BB1AC65B44006D7E04 /* torontoTest1.png */,
+				CC1D6CB41AEC966800B0E141 /* imageTest1@2x.png */,
+				CC1D6CB51AEC966800B0E141 /* imageTest1@3x.png */,
 			);
 			name = backgrounds;
 			sourceTree = "<group>";
@@ -222,9 +225,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0808BC1AC65B44006D7E04 /* torontoTest1.png in Resources */,
 				CC763E4B1AA175DC0075858A /* LaunchScreen.xib in Resources */,
+				CC1D6CB61AEC966800B0E141 /* imageTest1@2x.png in Resources */,
 				CC763E481AA175DC0075858A /* Images.xcassets in Resources */,
+				CC1D6CB71AEC966800B0E141 /* imageTest1@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
