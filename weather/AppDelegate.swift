@@ -15,11 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		// first print out the location of our coredata files
+		println(self.applicationSupportDirectory())
+		
 		// note what we need to do when we don't have a storyboard:
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		window!.rootViewController = MainViewController()
 		window!.makeKeyAndVisible()
 		return true
+	}
+	
+	// helper func from Cocoa is my Girlfriend - return the location of our core data files
+	func applicationSupportDirectory() -> NSURL {
+		let urls = NSFileManager.defaultManager().URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
+		let applicationSupportURL = urls[urls.endIndex - 1] as! NSURL
+		return applicationSupportURL
 	}
 
 	func applicationWillResignActive(application: UIApplication) {

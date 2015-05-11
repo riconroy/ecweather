@@ -14,7 +14,13 @@
 		CC763E481AA175DC0075858A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC763E471AA175DC0075858A /* Images.xcassets */; };
 		CC763E4B1AA175DC0075858A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC763E491AA175DC0075858A /* LaunchScreen.xib */; };
 		CC763E571AA175DD0075858A /* weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763E561AA175DD0075858A /* weatherTests.swift */; };
-		CC998CBE1ADB575500DCFF37 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CC998CBD1ADB575500DCFF37 /* UIImage+ImageEffects.m */; };
+		CC799F461B0043FA00AECD0E /* _CitypageForecastMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC799F421B0043FA00AECD0E /* _CitypageForecastMO.swift */; };
+		CC799F471B0043FA00AECD0E /* _LocationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC799F431B0043FA00AECD0E /* _LocationMO.swift */; };
+		CC799F481B0043FA00AECD0E /* CitypageForecastMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC799F441B0043FA00AECD0E /* CitypageForecastMO.swift */; };
+		CC799F491B0043FA00AECD0E /* LocationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC799F451B0043FA00AECD0E /* LocationMO.swift */; };
+		CCD5FCC51AEED80A00A2CB28 /* weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCD5FCC31AEED80A00A2CB28 /* weather.xcdatamodeld */; };
+		CCD5FCCA1AF2FED500A2CB28 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD5FCC91AF2FED500A2CB28 /* Location.swift */; };
+		CCD5FCCB1AF2FED500A2CB28 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD5FCC91AF2FED500A2CB28 /* Location.swift */; };
 		CCEF60031AA5366E00C26841 /* RCFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */; };
 		CCEF60051AA541A700C26841 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEF60041AA541A700C26841 /* Summary.swift */; };
 /* End PBXBuildFile section */
@@ -41,9 +47,12 @@
 		CC763E501AA175DD0075858A /* weatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC763E551AA175DD0075858A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC763E561AA175DD0075858A /* weatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherTests.swift; sourceTree = "<group>"; };
-		CC998CBC1ADB575500DCFF37 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		CC998CBD1ADB575500DCFF37 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		CC998CC01ADB596C00DCFF37 /* weather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "weather-Bridging-Header.h"; path = "../weather-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC799F421B0043FA00AECD0E /* _CitypageForecastMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _CitypageForecastMO.swift; sourceTree = "<group>"; };
+		CC799F431B0043FA00AECD0E /* _LocationMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _LocationMO.swift; sourceTree = "<group>"; };
+		CC799F441B0043FA00AECD0E /* CitypageForecastMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitypageForecastMO.swift; sourceTree = "<group>"; };
+		CC799F451B0043FA00AECD0E /* LocationMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMO.swift; sourceTree = "<group>"; };
+		CCD5FCC41AEED80A00A2CB28 /* weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = weather.xcdatamodel; sourceTree = "<group>"; };
+		CCD5FCC91AF2FED500A2CB28 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCFlowLayout.swift; sourceTree = "<group>"; };
 		CCEF60041AA541A700C26841 /* Summary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +87,9 @@
 		CC763E321AA175DC0075858A = {
 			isa = PBXGroup;
 			children = (
+				CCD5FCC91AF2FED500A2CB28 /* Location.swift */,
+				CCD5FCC31AEED80A00A2CB28 /* weather.xcdatamodeld */,
+				CC799F411B0043FA00AECD0E /* ModelObjects */,
 				CC763E3D1AA175DC0075858A /* weather */,
 				CC763E531AA175DD0075858A /* weatherTests */,
 				CC763E3C1AA175DC0075858A /* Products */,
@@ -98,7 +110,6 @@
 			children = (
 				CC763E401AA175DC0075858A /* AppDelegate.swift */,
 				CC763E421AA175DC0075858A /* MainViewController.swift */,
-				CC998CBF1ADB576000DCFF37 /* ImageEffects */,
 				CCEF60021AA5366E00C26841 /* RCFlowLayout.swift */,
 				CCEF60041AA541A700C26841 /* Summary.swift */,
 				CC763E471AA175DC0075858A /* Images.xcassets */,
@@ -134,14 +145,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CC998CBF1ADB576000DCFF37 /* ImageEffects */ = {
+		CC799F411B0043FA00AECD0E /* ModelObjects */ = {
 			isa = PBXGroup;
 			children = (
-				CC998CBC1ADB575500DCFF37 /* UIImage+ImageEffects.h */,
-				CC998CBD1ADB575500DCFF37 /* UIImage+ImageEffects.m */,
-				CC998CC01ADB596C00DCFF37 /* weather-Bridging-Header.h */,
+				CC799F421B0043FA00AECD0E /* _CitypageForecastMO.swift */,
+				CC799F431B0043FA00AECD0E /* _LocationMO.swift */,
+				CC799F441B0043FA00AECD0E /* CitypageForecastMO.swift */,
+				CC799F451B0043FA00AECD0E /* LocationMO.swift */,
 			);
-			name = ImageEffects;
+			name = ModelObjects;
+			path = weather/ModelObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC763E5A1AA175DD0075858A /* Build configuration list for PBXNativeTarget "weather" */;
 			buildPhases = (
+				CC799F401B00416100AECD0E /* Generate Model Objects */,
 				CC763E371AA175DC0075858A /* Sources */,
 				CC763E381AA175DC0075858A /* Frameworks */,
 				CC763E391AA175DC0075858A /* Resources */,
@@ -241,16 +255,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CC799F401B00416100AECD0E /* Generate Model Objects */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Model Objects";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$PROJECT_DIR/weather\" && /usr/local/bin/mogenerator --swift -m ../weather.xcdatamodeld/weather.xcdatamodel --output-dir ./ModelObjects";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CC763E371AA175DC0075858A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC799F471B0043FA00AECD0E /* _LocationMO.swift in Sources */,
+				CC799F481B0043FA00AECD0E /* CitypageForecastMO.swift in Sources */,
+				CC799F491B0043FA00AECD0E /* LocationMO.swift in Sources */,
 				CCEF60031AA5366E00C26841 /* RCFlowLayout.swift in Sources */,
-				CC998CBE1ADB575500DCFF37 /* UIImage+ImageEffects.m in Sources */,
 				CCEF60051AA541A700C26841 /* Summary.swift in Sources */,
 				CC763E431AA175DC0075858A /* MainViewController.swift in Sources */,
 				CC763E411AA175DC0075858A /* AppDelegate.swift in Sources */,
+				CC799F461B0043FA00AECD0E /* _CitypageForecastMO.swift in Sources */,
+				CCD5FCCA1AF2FED500A2CB28 /* Location.swift in Sources */,
+				CCD5FCC51AEED80A00A2CB28 /* weather.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD5FCCB1AF2FED500A2CB28 /* Location.swift in Sources */,
 				CC763E571AA175DD0075858A /* weatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +406,8 @@
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "weather-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -381,7 +419,8 @@
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "weather-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -450,6 +489,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCD5FCC31AEED80A00A2CB28 /* weather.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCD5FCC41AEED80A00A2CB28 /* weather.xcdatamodel */,
+			);
+			currentVersion = CCD5FCC41AEED80A00A2CB28 /* weather.xcdatamodel */;
+			path = weather.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC763E331AA175DC0075858A /* Project object */;
 }

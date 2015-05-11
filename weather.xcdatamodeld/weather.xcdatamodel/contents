@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CitypageForecast" representedClassName="CitypageForecastMO" syncable="YES">
+        <attribute name="citypageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="condition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dewpoint" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="forecastTimeLocal" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="forecastTimeUser" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="forecastTimeUTC" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="iconCode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="normalHigh" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="normalLow" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="observeTimeLocal" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="observeTimeUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="observeTimeUTC" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pressureChange" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pressureCurrent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pressureTendency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relativeHumidity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="visibility" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="windchill" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="windDegrees" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="windSpeed" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="citypage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="citypage" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="LocationMO" syncable="YES">
+        <attribute name="citypageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="citypageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meteoFilename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meteoID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="province" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regionCode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="citypage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CitypageForecast" inverseName="citypage" inverseEntity="CitypageForecast" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CitypageForecast" positionX="142" positionY="-9" width="128" height="390"/>
+        <element name="Location" positionX="-63" positionY="-18" width="128" height="150"/>
+    </elements>
+</model>
